@@ -19,8 +19,6 @@
   height: 550px; 
   min-width: 310px; 
   max-width: 800px; 
-  
-
 }
 .loading {
   margin-top: 10em;
@@ -29,6 +27,17 @@
 } 
 #zoom-out{
 	cursor: pointer;
+}
+.content{
+	margin-top: 40px;
+	border-left: 1px solid green; 
+}
+.content p,h5,h6{
+	padding-left: 10px;
+}
+#province,#district,#number{
+	font-weight: bold;
+	color: #877F7D;
 }
 </style>
 </head>
@@ -44,8 +53,23 @@
 			</div>
 			<button type="button" class="btn btn-success" id="zoom-out">Zoom out</button>
 		</div>
-		<div class="col-sm-3">
-			<p>Click on the map to show more data here</p>
+		<div class="col-sm-4">
+			<div class="content">
+				<h5>Detials of interventions: </h5>
+				<p>Province Name: <span id="province"></span></p>
+				<p>District Name: <span id="district"></span></p>
+				<p>Number of Interventions: <span id="number"></span></p>
+				<p>Total Budget: <span id="number">50 Million USD</span></p>
+				<p>Implementing Partners: <span id="number">EU, UNICEF, USaid</span></p>
+				<h6>Intervention Areas:</h6>
+				<ul>
+					<li>Health</li>
+					<li>Agriculture</li>
+					<li>Education</li>
+				</ul>
+
+			</div>
+			
 		</div>
 		</div>
 		
@@ -275,10 +299,25 @@
 	              formatter: function() {
 	                return 'Province: <b>' + this.point.properties.ADM1_EN + '</b><br/>' +
 	                  'District: <b>' + this.point.properties.ADM2_EN + '</b><br/>' +
-	                  'Number of interventions: <b>' + this.point.value + '</b><br/>'
+	                  'Number of interventions: <b>' + this.point.value + '</b><br/>';
+	                 
 
 	              }
 	            },
+	            plotOptions:{
+	                    	series:{
+	                        	point:{
+	                            	events:{
+	                                	click: function(){
+	                                    	document.getElementById("province").innerHTML = this.properties.ADM1_EN;
+	                                    	document.getElementById("district").innerHTML = this.properties.ADM2_EN;
+	                                    	document.getElementById("number").innerHTML = this.value;
+	                                    	//document.getElementById("province").innerHTML = this.properties.ADM2_EN;
+	                                    }
+	                                }
+	                            }
+	                        }
+	                    },
 
 	        series: [{
 	            data: data2,
@@ -290,7 +329,7 @@
 	      		events: {
 	              click: function (e) {
 	              e.point.zoomTo();
-	              }
+	              },
 	            },
 	            states: {
 	                hover: {
