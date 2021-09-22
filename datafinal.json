@@ -1,5 +1,5 @@
-	[
-	   {
+[
+	  {
 		"ADM2_PCODE": "LA0101", 
 		"value": 3
 	    },
@@ -17,7 +17,8 @@
 	    },
 	    {	
 	    	"ADM2_PCODE": "LA0105", 
-	    	"value":15},
+	    	"value":15
+	    },
 	    {	
 	    	"ADM2_PCODE": "LA0106", 
 	    	"value":9
@@ -591,5 +592,5 @@
 	    {
 	    	"ADM2_PCODE": "LA1805", 
 	    	"value":15
-	    },
-	]
+	    }
+]
