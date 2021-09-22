@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+#container {
+  height: 550px; 
+  min-width: 310px; 
+  max-width: 800px; 
+  
+
+}
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+} 
+#zoom-out{
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8">
+			<div id="container">
+				<div class="loading">
+						<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+						Map Rendering...
+					</div>
+			</div>
+			<button type="button" class="btn btn-success" id="zoom-out">Zoom out</button>
+		</div>
+		<div class="col-sm-3">
+			<p>Click on the map to show more data here</p>
+		</div>
+		</div>
+		
+		
+	</div>
+	
+<script>
+	// Prepare random data
+	var data = [
+	    ['LA0401', 728],
+	    ['LA0402', 710],
+	    ['LA0403', 963],
+	    ['LA0404', 541],
+	    ['LA0405', 622],
+	    ['LA0406', 866],
+	    ['LA0407', 398]
+	];
+		var data2 = [
+		['LA0101', 3],
+	    ['LA0102', 7],
+	    ['LA0103', 12],
+	    ['LA0104', 9],
+	    ['LA0105', 15],
+	    ['LA0106', 9],
+	    ['LA0107', 19],
+	    ['LA0108', 9],
+	    ['LA0109', 19],
+	    ['LA0201', 3],
+	    ['LA0202', 7],
+	    ['LA0203', 12],
+	    ['LA0204', 9],
+	    ['LA0205', 15],
+	    ['LA0206', 9],
+	    ['LA0207', 19],
+	    ['LA0301', 3],
+	    ['LA0302', 7],
+	    ['LA0303', 12],
+	    ['LA0304', 9],
+	    ['LA0305', 15],
+	    ['LA0401', 3],
+	    ['LA0402', 7],
+	    ['LA0403', 12],
+	    ['LA0404', 9],
+	    ['LA0405', 15],
+	    ['LA0406', 9],
+	    ['LA0407', 19],
+	    ['LA0501', 3],
+	    ['LA0502', 7],
+	    ['LA0503', 12],
+	    ['LA0504', 9],
+	    ['LA0505', 15],
+	    ['LA0601', 3],
+	    ['LA0602', 7],
+	    ['LA0603', 12],
+	    ['LA0604', 9],
+	    ['LA0605', 15],
+	    ['LA0606', 9],
+	    ['LA0607', 19],
+	    ['LA0608', 12],
+	    ['LA0609', 9],
+	    ['LA0610', 15],
+	    ['LA0611', 9],
+	    ['LA0612', 19],
+	    ['LA0701', 3],
+	    ['LA0702', 7],
+	    ['LA0703', 12],
+	    ['LA0704', 9],
+	    ['LA0705', 15],
+	    ['LA0706', 9],
+	    ['LA0707', 19],
+	    ['LA0708', 12],
+	    ['LA0709', 9],
+	    ['LA0710', 15],
+	    ['LA0801', 3],
+	    ['LA0802', 7],
+	    ['LA0803', 12],
+	    ['LA0804', 9],
+	    ['LA0805', 15],
+	    ['LA0806', 9],
+	    ['LA0807', 19],
+	    ['LA0808', 12],
+	    ['LA0809', 9],
+	    ['LA0810', 15],
+	    ['LA0811', 9],
+	    ['LA0901', 3],
+	    ['LA0902', 7],
+	    ['LA0903', 12],
+	    ['LA0904', 9],
+	    ['LA0905', 15],
+	    ['LA0906', 9],
+	    ['LA0907', 19],
+	    ['LA1001', 3],
+	    ['LA1002', 7],
+	    ['LA1003', 12],
+	    ['LA1004', 9],
+	    ['LA1005', 15],
+	    ['LA1006', 9],
+	    ['LA1007', 19],
+	    ['LA1008', 12],
+	    ['LA1009', 9],
+	    ['LA1010', 22],
+	    ['LA1011', 9],
+	    ['LA1013', 9],
+	    ['LA1101', 9],
+	   	['LA1102', 7],
+	    ['LA1103', 12],
+	    ['LA1104', 9],
+	    ['LA1105', 15],
+	    ['LA1106', 9],
+	    ['LA1107', 19],
+	   	['LA1201', 3],
+	    ['LA1202', 7],
+	    ['LA1203', 12],
+	    ['LA1204', 9],
+	    ['LA1205', 15],
+	    ['LA1206', 9],
+	    ['LA1207', 19],
+	    ['LA1208', 12],
+	    ['LA1209', 9],
+	    ['LA1210', 21],
+	    ['LA1301', 3],
+	    ['LA1302', 7],
+	    ['LA1303', 12],
+	    ['LA1304', 9],
+	    ['LA1305', 15],
+	    ['LA1306', 9],
+	    ['LA1307', 19],
+	    ['LA1308', 12],
+	    ['LA1309', 9],
+	    ['LA1310', 15],
+	    ['LA1311', 9],
+	    ['LA1312', 12],
+	    ['LA1313', 9],
+	    ['LA1314', 15],
+	    ['LA1315', 22],
+	    ['LA1401', 3],
+	    ['LA1402', 7],
+	    ['LA1403', 12],
+	    ['LA1404', 9],
+	    ['LA1405', 15],
+	    ['LA1406', 9],
+	    ['LA1407', 19],
+	    ['LA1408', 12],
+	    ['LA1501', 3],
+	    ['LA1502', 7],
+	    ['LA1503', 12],
+	    ['LA1504', 9],
+	    ['LA1601', 3],
+	    ['LA1602', 7],
+	    ['LA1603', 12],
+	    ['LA1604', 9],
+	    ['LA1605', 15],
+	    ['LA1606', 9],
+	    ['LA1607', 19],
+	    ['LA1608', 12],
+	    ['LA1609', 9],
+	    ['LA1610', 15],
+	    ['LA1701', 3],
+	    ['LA1702', 7],
+	    ['LA1703', 12],
+	    ['LA1704', 9],
+	    ['LA1705', 15],
+	    ['LA1801', 3],
+	    ['LA1802', 7],
+	    ['LA1803', 12],
+	    ['LA1804', 9],
+	    ['LA1805', 15],
+	];
+
+	Highcharts.getJSON('https://raw.githubusercontent.com/awareautoh/map/master/map1.js', function (geojson) {
+
+	    // Initiate the chart
+	   var chart =  Highcharts.mapChart('container', {
+	        chart: {
+	            map: geojson
+	        },
+	        colors: ['rgba(79,243,49)', 'rgba(255,255,0)', 'rgba(250,139,114)',
+	                   'rgba(249,43,26)'],
+
+	        title: {
+	            text: 'Nutrition interventions by District'
+	        },
+
+	        mapNavigation: {
+	            enabled: true,
+	            buttonOptions: {
+	                verticalAlign: 'bottom',
+	                align:'right'
+	            }
+	        },
+	        legend: {
+	                   title: {
+	                       text: 'Total interventions'
+	                   },
+	                   align: 'left',
+	                   verticalAlign: 'bottom',
+	                   floating: true,
+	                   layout: 'vertical',
+	                   valueDecimals: 0,
+	                   backgroundColor: 'rgba(255,255,255,0.9)',
+	                   symbolRadius: 0,
+	                   symbolHeight: 14
+	               },
+
+	        colorAxis: {
+	             // min: data.min,
+	             // max: data.max,
+	             // type: 'logarithmic',
+	             // minColor: '#efecf3',
+	             // maxColor: '#990041'
+	             dataClassColor: 'category',
+	                        dataClasses: [{
+	                            from:0,
+	                            to: 5
+	                        }, {
+	                            from: 6,
+	                            to: 10
+	                        }, {
+	                            from: 11,
+	                            to: 20
+	                        }, {
+	                            from: 21,
+	                            to: 36
+	                        }]
+	           },
+	             tooltip: {
+	              formatter: function() {
+	                return 'Province: <b>' + this.point.properties.ADM1_EN + '</b><br/>' +
+	                  'District: <b>' + this.point.properties.ADM2_EN + '</b><br/>' +
+	                  'Number of interventions: <b>' + this.point.value + '</b><br/>'
+
+	              }
+	            },
+
+	        series: [{
+	            data: data2,
+	            keys: ['ADM2_PCODE', 'value'],
+	            joinBy: 'ADM2_PCODE',
+	            name: 'Number of interventions',
+	            allowPointSelect: true,
+	      		cursor: 'pointer',
+	      		events: {
+	              click: function (e) {
+	              e.point.zoomTo();
+	              }
+	            },
+	            states: {
+	                hover: {
+	                    color: '#a4edba'
+	                }
+	            },
+	            dataLabels: {
+	                enabled: true,
+	                format: '{point.properties.ADM2_EN}'
+	            },
+	        }]
+	    });
+	    	       document.getElementById('zoom-out').addEventListener('click', function () {
+	            chart.mapZoom();
+	        });
+
+		});
+
+
+</script>
+
+</body>
+</html>
