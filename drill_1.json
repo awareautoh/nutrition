@@ -1,0 +1,93 @@
+[
+	   {
+		"Province": "Vientiane Capital", 
+		"intervention": 3,
+    "drilldown":"Vientiane Capital"
+	    },
+	    {
+	    	"Province": "Phongsaly",
+	    	"intervention": 7,
+         "drilldown":"Phongsaly"
+	    },
+	    {	
+	    	"Province": "Luangnamtha",
+	    	"intervention": 12,
+         "drilldown":"Luangnamtha"
+	    },
+	    {	
+	    	"Province": "Oudomxay", 
+	    	"intervention":9,
+         "drilldown":"Oudomxay"
+	    },
+	    {	
+	    	"Province": "Bokeo", 
+	    	"intervention":15,
+         "drilldown":"Bokeo"
+	    },
+	    {	
+	    	"Province": "Luangprabang", 
+	    	"intervention":9,
+         "drilldown":"Luangprabang"
+	    },
+	    {	
+	    	"Province": "Huaphanh", 
+	    	"intervention":19,
+         "drilldown":"Huaphanh"
+	    },
+	    {
+	    	"Province": "Xayabury",
+	    	"intervention": 9,
+         "drilldown":"Xayabury"
+	    },
+	    {
+	    	"Province": "Xiengkhuang",
+	    	"intervention": 19,
+        "drilldown":"Xiengkhuang"
+	    },
+	    {
+	    	"Province": "Vientiane Province", 
+	    	"intervention":3,
+        "drilldown":"Vientiane Province"
+	    },
+	    {
+	    	"Province": "Borikhamxay",
+	    	"intervention": 7,
+         "drilldown":"Borikhamxay"
+	    },
+	    {
+	    	"Province": "Khammuan",
+	    	"intervention": 12,
+        "drilldown":"Khammuan"
+	    },
+	    {
+	    	"Province": "Savannakhet",
+	    	"intervention": 9,
+        "drilldown":"Savannakhet"
+	    },
+	    {
+	    	"Province": "Saravane", 
+	    	"intervention":15,
+        "drilldown":"Saravane"
+	    },
+	    {
+	    	"Province": "Sekong", 
+	    	"intervention":9,
+        "drilldown":"Sekong"
+	    },
+	    {
+	    	"Province": "Champasak",
+	    	"intervention": 19,
+        "drilldown":"Champasak"
+	    },
+	    {
+	    	"Province": "Attapeu",
+	    	"intervention": 3,
+        "drilldown":"Attapeu"
+	    },
+	    {
+	    	"Province": "Xaysomboune", 
+	    	"intervention":7,
+        "drilldown":"Xaysomboune"
+	    }
+	 
+]
