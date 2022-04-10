@@ -99,7 +99,8 @@
 	    	"Province": "Attapeu",
 	    	"intervention": 3,
 		"partner":4,
-		"donor":2
+		"donor":2,
+		drilldown: 'animals'
 	    },
 	    {
 	    	"Province": "Xaysomboune", 
