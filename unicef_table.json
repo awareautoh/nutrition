@@ -1,77 +1,77 @@
 [
 	   {
 		"Province": "Vientiane Capital", 
-		"intervention": "Not available",
+		"intervention": "Not available"
 		
 	    },
 	    {
 	    	"Province": "Phongsaly",
-	    	"intervention": 7,
+	    	"intervention": 7
 	    },
 	    {	
 	    	"Province": "Luangnamtha",
-	    	"intervention": 12,
+	    	"intervention": 12
 	    },
 	    {	
 	    	"Province": "Oudomxay", 
-	    	"intervention":9,
+	    	"intervention":9
 	    },
 	    {	
 	    	"Province": "Bokeo", 
-	    	"intervention":"Notavialable",
+	    	"intervention":"Notavialable"
 		
 	    },
 	    {	
 	    	"Province": "Luangprabang", 
-	    	"intervention":9,
+	    	"intervention":9
 	    },
 	    {	
 	    	"Province": "Huaphanh", 
-	    	"intervention":19,
+	    	"intervention":19
 	    },
 	    {
 	    	"Province": "Xayabury",
-	    	"intervention": 9,
+	    	"intervention": 9
 	    },
 	    {
 	    	"Province": "Xiengkhuang",
-	    	"intervention": 19,
+	    	"intervention": 19
 	    },
 	    {
 	    	"Province": "Vientiane Province", 
-	    	"intervention":3,
+	    	"intervention":3
 	    },
 	    {
 	    	"Province": "Borikhamxay",
-	    	"intervention": 7,
+	    	"intervention": 7
 	    },
 	    {
 	    	"Province": "Khammuan",
-	    	"intervention": 12,
+	    	"intervention": 12
 	    },
 	    {
 	    	"Province": "Savannakhet",
-	    	"intervention": 9,
+	    	"intervention": 9
 	    },
 	    {
 	    	"Province": "Saravane", 
-	    	"intervention":15,
+	    	"intervention":15
 	    },
 	    {
 	    	"Province": "Sekong", 
-	    	"intervention":9,
+	    	"intervention":9
 	    },
 	    {
 	    	"Province": "Champasak",
-	    	"intervention": 19,
+	    	"intervention": 19
 	    },
 	    {
 	    	"Province": "Attapeu",
-	    	"intervention": 3,
+	    	"intervention": 3
 	    },
 	    {
 	    	"Province": "Xaysomboune", 
-	    	"intervention":7,
+	    	"intervention":7
 	    }
 	 
 ]
