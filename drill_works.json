@@ -6,13 +6,13 @@
 	    },
 	    {
 	    	"name": "Phongsaly",
-	    	"intervention": 7,
+	    	"y": 7,
        		 "drilldown": "animals"
 	
 	    },
 	    {	
 	    	"name": "Luangnamtha",
-	    	"intervention": 12,
+	    	"y": 12,
         	"drilldown": "animals"
 	    } 
 ]
