@@ -1,0 +1,94 @@
+[
+	   {
+		"Province": "Vientiane Capital", 
+		"intervention": 3,
+       "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Phongsaly",
+	    	"intervention": 7,
+        "drilldown": "animals"
+	
+	    },
+	    {	
+	    	"Province": "Luangnamtha",
+	    	"intervention": 12,
+        "drilldown": "animals"
+	    },
+	    {	
+	    	"Province": "Oudomxay", 
+	    	"intervention":9,
+        "drilldown": "animals"
+	    },
+	    {	
+	    	"Province": "Bokeo", 
+	    	"intervention":15,
+        "drilldown": "animals"
+	    },
+	    {	
+	    	"Province": "Luangprabang", 
+	    	"intervention":9,
+        "drilldown": "animals"
+	    },
+	    {	
+	    	"Province": "Huaphanh", 
+	    	"intervention":19,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Xayabury",
+	    	"intervention": 9,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Xiengkhuang",
+	    	"intervention": 19,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Vientiane Province", 
+	    	"intervention":3,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Borikhamxay",
+	    	"intervention": 7,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Khammuan",
+	    	"intervention": 12,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Savannakhet",
+	    	"intervention": 9,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Saravane", 
+	    	"intervention":15,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Sekong", 
+	    	"intervention":9,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Champasak",
+	    	"intervention": 19,
+        "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Attapeu",
+	    	"intervention": 3,
+		    "drilldown": "animals"
+	    },
+	    {
+	    	"Province": "Xaysomboune", 
+	    	"intervention":7,
+        "drilldown": "animals"
+	    }
+	 
+]
