@@ -1,0 +1,75 @@
+[
+	   {
+		"ADM1_PCODE": "LA01", 
+		"value": 0
+	    },
+	    {
+	    	"ADM1_PCODE": "LA02",
+	    	"value": 1
+	    },
+	    {	
+	    	"ADM1_PCODE": "LA03",
+	    	"value": 1
+	    },
+	    {	
+	    	"ADM1_PCODE": "LA04", 
+	    	"value":1
+	    },
+	    {	
+	    	"ADM1_PCODE": "LA05", 
+	    	"value":0
+	    },
+	    {	
+	    	"ADM1_PCODE": "LA06", 
+	    	"value":1
+	    },
+	    {	
+	    	"ADM1_PCODE": "LA07", 
+	    	"value":1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA08",
+	    	"value": 1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA09",
+	    	"value": 1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA10", 
+	    	"value":1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA11",
+	    	"value": 0
+	    },
+	    {
+	    	"ADM1_PCODE": "LA12",
+	    	"value": 1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA13",
+	    	"value": 0
+	    },
+	    {
+	    	"ADM1_PCODE": "LA14", 
+	    	"value":1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA15", 
+	    	"value":1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA16",
+	    	"value": 1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA17",
+	    	"value": 1
+	    },
+	    {
+	    	"ADM1_PCODE": "LA18", 
+	    	"value":1
+	    }
+	 
+	]
