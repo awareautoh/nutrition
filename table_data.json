@@ -100,7 +100,7 @@
 	    	"intervention": 3,
 		"partner":4,
 		"donor":2,
-		drilldown: 'animals'
+		"drilldown": "animals"
 	    },
 	    {
 	    	"Province": "Xaysomboune", 
